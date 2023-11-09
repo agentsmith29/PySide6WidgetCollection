@@ -19,7 +19,7 @@ class PlayPushButton(QPushButton):
         self.setText(text)
 
     
-    def _style_play(self):
+    def _style_play(self, img_path='/icons/icons/cil-media-play.png'):
         return """
                 QPushButton {		
             background-color: rgb(36, 209, 21);
@@ -30,7 +30,7 @@ class PlayPushButton(QPushButton):
             border-left: 22px solid transparent;
             text-align: left;
             padding-left: 44px;
-            background-image: url(:/icons/images/icons/cil-media-play.png);
+            background-image: url(:""" + img_path + """);
         }
         
         QPushButton:hover {
@@ -49,7 +49,7 @@ class PlayPushButton(QPushButton):
         
                 """
 
-    def _style_pause(self):
+    def _style_pause(selfm, img_path = "/icons/icons/cil-media-pause.png"):
         return """
             QPushButton {		
                background-color: rgb(255, 200,11);
@@ -60,7 +60,7 @@ class PlayPushButton(QPushButton):
                 border-left: 22px solid transparent;
                 text-align: left;
                 padding-left: 44px;
-                background-image: url(:/icons/images/icons/cil-media-pause.png)
+                background-image: url(:""" + img_path + """)
             }
     
             QPushButton:hover {
@@ -78,7 +78,7 @@ class PlayPushButton(QPushButton):
             }
         """
 
-    def _style_stop(self):
+    def _style_stop(self, img_path = "/icons/icons/cil-media-stop.png"):
         return """
             QPushButton {		
                 background-color: rgb(242, 41, 41);
@@ -89,7 +89,7 @@ class PlayPushButton(QPushButton):
                 border-left: 22px solid transparent;
                 text-align: left;
                 padding-left: 44px;
-                background-image: url(:/icons/images/icons/cil-media-stop.png)
+                background-image: url(:""" + img_path + """)
             }
             
             QPushButton:hover {
