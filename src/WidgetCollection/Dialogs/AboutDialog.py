@@ -44,6 +44,9 @@ class AboutDialog(QDialog):
         app_desc.setFont(app_desc_font)
         app_desc.setAlignment(Qt.AlignCenter)
         layout.addWidget(app_desc)
+        # Automatic line breaks
+        app_desc.setWordWrap(True)
+
 
         # Version number
         version_label = QLabel(f"Version: {app_version}", self)
@@ -68,21 +71,24 @@ class AboutDialog(QDialog):
         # Developer
         licence_label = QLabel(f"{licence}", self)
         licence_label.setAlignment(Qt.AlignCenter)
+        licence_label.setWordWrap(True)
         layout.addWidget(licence_label)
 
 
+        line = QFrame()
+        line.setFrameShape(QFrame.HLine)
+        line.setFrameShadow(QFrame.Sunken)
+        layout.addWidget(line)
+
         # Git URL
-        self.git_label = QLabel(f'Visit <a href="{app_git_url}">{app_git_url}</a> for more information<br>'
+        self.git_label = QLabel(f'Visit <a href="{app_git_url}">Github</a> for more information<br>'
                                 f'or to report a bug or to suggest new features.', self)
         self.git_label.setOpenExternalLinks(True)
         self.git_label.setAlignment(Qt.AlignCenter)
         self.git_label.linkActivated.connect(self.open_url)
         layout.addWidget(self.git_label)
 
-        line = QFrame()
-        line.setFrameShape(QFrame.HLine)
-        line.setFrameShadow(QFrame.Sunken)
-        layout.addWidget(line)
+
 
 
 
@@ -101,16 +107,4 @@ class AboutDialog(QDialog):
         print(url)
         webbrowser.open(url)
 
-if __name__ == "__main__":
-    import sys
-    app = QApplication(sys.argv)
-    dialog = AboutDialog("TestApplication",
-                         "This is a test application",
-                         "1.0",
-                         "2024 John Doe",
-                         "github.com",
-                            "This project is open source and <br>contributions are highly welcome."
-                            "<br>The project is licensed under {licence}.",
-                         QPixmap("adscopecontrol_icon.png"))
-    dialog.exec()
-    sys.exit(app.exec())
+
