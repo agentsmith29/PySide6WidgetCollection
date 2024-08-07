@@ -1,5 +1,5 @@
 [project]
-name = "fswidgets"
+name = "PySide6WidgetCollection"
 version = "1.0.0.0"
 authors = [
   { name="Christoph Schmidt", email="cschmidt.fs@gmail.com" },
