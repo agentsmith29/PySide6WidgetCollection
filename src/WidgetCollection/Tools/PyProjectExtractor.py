@@ -42,6 +42,11 @@ def extract_pyproject_info(pytoml_file: Path, keyword) -> str:
                 description = pyproject_data.get("project", {}).get("description", None)
                 if description:
                     return description
+            
+            elif keyword == "name":
+                name = pyproject_data.get("project", {}).get("name", None)
+                if name:
+                    return name
 
     return importlib.metadata.version(__package__ or __name__.split(".", maxsplit=1)[0])
 

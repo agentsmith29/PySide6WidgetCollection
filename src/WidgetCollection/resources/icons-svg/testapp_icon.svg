@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.76167929"
-     inkscape:cx="396.49233"
-     inkscape:cy="561.25984"
+     inkscape:cx="397.14878"
+     inkscape:cy="560.6034"
      inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="-9"
@@ -60,7 +60,10 @@
        y="86.833878"
        ry="7.9602041"
        inkscape:transform-center-x="4.8631579"
-       inkscape:transform-center-y="-15.284211" />
+       inkscape:transform-center-y="-15.284211"
+       inkscape:export-filename="..\icons\testapp_icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <g
        id="shape26-1"
        transform="matrix(0.85646132,0,0,0.73932636,51.637866,67.51496)"
@@ -93,7 +96,7 @@
        xml:space="preserve"
        transform="matrix(0.41888444,0,0,0.40673952,-28.189646,-68.685059)"
        id="text3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:146.667px;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;shape-inside:url(#rect4);fill:none;stroke:#d8d8d8;stroke-width:9.4594"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:146.667px;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;shape-inside:url(#rect4);display:inline;fill:none;stroke:#d8d8d8;stroke-width:9.4594"><tspan
          x="215.31445"
          y="524.66369"
          id="tspan1">T</tspan></text>

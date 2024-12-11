@@ -17,7 +17,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     app_name = "TestApplication"
 
-    app_version =  extract_pyproject_info(Path(__file__).parent.parent, "version")
+    app_version = extract_pyproject_info(Path(__file__).parent.parent, "version")
     app_author = extract_pyproject_info(Path(__file__).parent.parent, "author")
     app_url = extract_pyproject_info(Path(__file__).parent.parent, "url")
     app_description = extract_pyproject_info(Path(__file__).parent.parent, "description")
