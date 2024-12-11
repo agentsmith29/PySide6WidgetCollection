@@ -31,6 +31,7 @@ if __name__ == "__main__":
                          app_url,
                          f"This project is open source and contributions are highly welcome.<br>"
                          f"<br>The project is licensed under <br>{app_licence}.",
-                         QPixmap("testapp_icon.png"))
+                         QPixmap("testapp_icon.png"),
+                        copyright_information="(c) By MyCopany")
     dialog.exec()
     sys.exit(app.exec())

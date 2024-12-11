@@ -13,6 +13,7 @@ class AboutDialog(QDialog):
                  app_git_url: str,
                  licence: str,
                  pixmap: QPixmap,
+                 copyright_information: str = None,
                  parent=None):
         super(AboutDialog, self).__init__(parent)
         self.setWindowTitle("About")
@@ -60,6 +61,23 @@ class AboutDialog(QDialog):
         developer_label.setFont(developer_label_font)
         developer_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(developer_label)
+
+        if copyright_information:
+            line = QFrame()
+            line.setFrameShape(QFrame.HLine)
+            line.setFrameShadow(QFrame.Sunken)
+            layout.addWidget(line)
+
+            layout.addWidget(QLabel(f"Additional Information", self))
+            # Add a horizontal line
+            
+            # Developer
+            developer_label = QLabel(f"{copyright_information}", self)
+            developer_label.setAlignment(Qt.AlignLeft)
+            developer_label.setWordWrap(True)
+            layout.addWidget(developer_label)
+
+            # Add a horizontal line
 
         # Add a horizontal line
         line = QFrame()
